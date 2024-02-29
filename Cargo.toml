@@ -1,0 +1,10 @@
+[package]
+name = "polka_probe_checker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crc = "3.0.1"
+
+[dev-dependencies]
+test-case = "3.3.1"
