@@ -1,0 +1,81 @@
+### Attacker is switch s555 with nodeId 0x1337
+
+*** 👃 Sniffing on ['s1-eth1', 's1-eth2', 's2-eth1', 's2-eth2', 's2-eth3', 's3-eth1', 's3-eth2', 's3-eth3', 's4-eth1', 's4-eth2', 's4-eth3', 's5-eth1', 's5-eth2', 's5-eth3', 's5-eth4', 's6-eth1', 's6-eth2', 's6-eth3', 's6-eth4', 's7-eth1', 's7-eth2', 's7-eth3', 's8-eth1', 's8-eth2', 's8-eth3', 's9-eth1', 's9-eth2', 's9-eth3', 's10-eth1', 's10-eth2', 'e1-eth1', 'e1-eth2', 'e1-eth3', 'e2-eth1', 'e2-eth2', 'e3-eth1', 'e3-eth2', 'e4-eth1', 'e4-eth2', 'e5-eth1', 'e5-eth2', 'e6-eth1', 'e6-eth2', 'e7-eth1', 'e7-eth2', 'e8-eth1', 'e8-eth2', 'e9-eth1', 'e9-eth2', 'e10-eth1', 'e10-eth2', 's555-eth0', 's555-eth1']
+*** Testing network integrity
+    a ping from h1 to h10,
+    goes through all core switches.
+h1 -> *** h1 : ('ping -c1 -W 1 10.0.10.10',)
+PING 10.0.10.10 (10.0.10.10) 56(84) bytes of data.
+64 bytes from 10.0.10.10: icmp_seq=1 ttl=64 time=9.48 ms
+
+--- 10.0.10.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 9.479/9.479/9.479/0.000 ms
+h10 
+h10 -> *** h10 : ('ping -c1 -W 1 10.0.1.1',)
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_seq=1 ttl=64 time=7.37 ms
+
+--- 10.0.1.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 7.369/7.369/7.369/0.000 ms
+h1 
+*** Results: 0% dropped (2/2 received)
+*** Stopping sniffing
+*** Checking collected packets
+*** 🔍 Tracing new packet
+*** Comparing 0x61e8d6e7, expects 0x61e8d6e7 on node 0x00ff ok ✅
+*** Comparing 0xae91434c, expects 0xae91434c on node 0x002b ok ✅
+*** Comparing 0x08c97f5f, expects 0x08c97f5f on node 0x002d ok ✅
+*** Comparing 0xeff1aad2, expects 0xeff1aad2 on node 0x0039 ok ✅
+*** Comparing 0x08040c89, expects 0x08040c89 on node 0x003f ok ✅
+*** Comparing 0xaa99ae2e, expects 0xaa99ae2e on node 0x0047 ok ✅
+*** Comparing 0xc450dd37, expects 0x7669685e on node 0x0047 ❌ Digest does not match
+*** Comparing 0x5397c754, expects 0x03e1e388 on node 0x0053 ❌ Digest does not match
+*** Comparing 0xe21dab66, expects 0x2138ffd3 on node 0x008d ❌ Digest does not match
+*** Comparing 0x8c375948, expects 0x1ef2cbbe on node 0x00bd ❌ Digest does not match
+*** Comparing 0x352f1cf8, expects 0x99c5fe05 on node 0x00d7 ❌ Digest does not match
+*** 🔍 Tracing new packet
+*** Comparing 0x3a61c724, 
+
+                        expects 0x61e8d6e7 on node 0x00f5 ❌ Digest does not match
+*** Comparing 0x61e8d6e7, expects 0xcffabc9f on node 0x00ff ❌ Digest does not match
+*** Comparing 0xcffabc9f, expects 0x69409e70 on node 0x00f5 ❌ Digest does not match
+*** Comparing 0x69409e70, expects 0xf3e992e0 on node 0x00d7 ❌ Digest does not match
+*** Comparing 0xf3e992e0, expects 0x8dde192b on node 0x00bd ❌ Digest does not match
+*** Comparing 0x8dde192b, expects 0x92b098fa on node 0x008d ❌ Digest does not match
+*** Comparing 0x92b098fa, expects 0x1115a62c on node 0x0053 ❌ Digest does not match
+*** Comparing 0x1115a62c, expects 0x41e1b5e0 on node 0x0047 ❌ Digest does not match
+*** Comparing 0x41e1b5e0, expects 0x227f0b72 on node 0x003f ❌ Digest does not match
+*** Comparing 0x227f0b72, expects 0x82fc6346 on node 0x0039 ❌ Digest does not match
+*** Comparing 0x82fc6346, expects 0xd01e3e0f on node 0x002d ❌ Digest does not match
+*** 🔍 Tracing new packet
+*** Comparing 0xd01e3e0f, expects 0x61e8d6e7 on node 0x002b ❌ Digest does not match
+*** Comparing 0x61e8d6e7, expects 0xcffabc9f on node 0x00ff ❌ Digest does not match
+*** Comparing 0xcffabc9f, expects 0x69409e70 on node 0x00f5 ❌ Digest does not match
+*** Comparing 0x69409e70, expects 0xf3e992e0 on node 0x00d7 ❌ Digest does not match
+*** Comparing 0xf3e992e0, expects 0x8dde192b on node 0x00bd ❌ Digest does not match
+*** Comparing 0x8dde192b, expects 0x92b098fa on node 0x008d ❌ Digest does not match
+*** Comparing 0x92b098fa, expects 0x1115a62c on node 0x0053 ❌ Digest does not match
+*** Comparing 0x1115a62c, expects 0x41e1b5e0 on node 0x0047 ❌ Digest does not match
+*** Comparing 0x41e1b5e0, expects 0x227f0b72 on node 0x003f ❌ Digest does not match
+*** Comparing 0x227f0b72, expects 0x82fc6346 on node 0x0039 ❌ Digest does not match
+*** Comparing 0x82fc6346, expects 0xd01e3e0f on node 0x002d ❌ Digest does not match
+*** 🔍 Tracing new packet
+*** Comparing 0xd01e3e0f, expects 0x61e8d6e7 on node 0x002b ❌ Digest does not match
+*** Comparing 0x61e8d6e7, expects 0xae91434c on node 0x00ff ❌ Digest does not match
+*** Comparing 0xae91434c, expects 0x08c97f5f on node 0x002b ❌ Digest does not match
+*** Comparing 0x08c97f5f, expects 0xeff1aad2 on node 0x002d ❌ Digest does not match
+*** Comparing 0xeff1aad2, expects 0x08040c89 on node 0x0039 ❌ Digest does not match
+*** Comparing 0x08040c89, expects 0xaa99ae2e on node 0x003f ❌ Digest does not match
+*** Comparing 0xaa99ae2e, expects 0x7669685e on node 0x0047 ❌ Digest does not match
+*** Comparing 0xc450dd37, expects 0x03e1e388 on node 0x0047 ❌ Digest does not match
+*** Comparing 0x5397c754, expects 0x2138ffd3 on node 0x0053 ❌ Digest does not match
+*** Comparing 0xe21dab66, expects 0x1ef2cbbe on node 0x008d ❌ Digest does not match
+*** Comparing 0x8c375948, expects 0x99c5fe05 on node 0x00bd ❌ Digest does not match
+*** ❌ Expected 88 packets, got 92
+*** Remaining 4 packets
+*** 0x352f1cf8 on node 0x00d7
+*** 0x352f1cf8 on node 0x00d7
+*** 0x3a61c724 on node 0x00f5
+*** 0x3a61c724 on node 0x00f5
