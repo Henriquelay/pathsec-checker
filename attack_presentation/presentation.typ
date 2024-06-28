@@ -175,12 +175,12 @@
     node((0 / 2, 1), "h11", stroke: 0.5pt, name: "h11", shape: shapes.rect)
     edge(auto, <e1>, "<->")
     node((5.5 / 2, -0.5), "s555", stroke: 0.5pt, name: "s555", shape: shapes.octagon)
-    edge(<s555>, <s6>, "->")
-    edge(<s5>, <s555>, "->")
+    edge(<s555>, <s6>, "<->")
+    edge(<s5>, <s555>, "<->")
   })
 
-  $"s5" -> "s555"$ connects through port 2:0 \
-  $"s555" -> "s6"$ connects through port 1:2 \
+  $"s5" <-> "s555"$ connects through port 2:0 \
+  $"s555" <-> "s6"$ connects through port 1:2 \
   $"s5" <-> "s6"$ connects through port 3:3 \
 ]
 
