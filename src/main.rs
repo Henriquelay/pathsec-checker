@@ -13,18 +13,22 @@ type Hash = u32;
 fn main() {
     // A route for a packet going from h1 to h6, dependant on the topology
     // This is just the example captured in the wireshark snapshot
-    const ROUTE: [(Switch, Port); 6] = [
-        (CORE_SWITCHES[0], 0x2),
-        (CORE_SWITCHES[1], 0x3),
-        (CORE_SWITCHES[2], 0x3),
-        (CORE_SWITCHES[3], 0x3),
-        (CORE_SWITCHES[4], 0x3),
-        (CORE_SWITCHES[5], 0x1),
+    const ROUTE: [(Switch, Port); 10] = [
+        (CORE_SWITCHES[0], 0x1),
+        (CORE_SWITCHES[1], 0x2),
+        (CORE_SWITCHES[2], 0x2),
+        (CORE_SWITCHES[3], 0x2),
+        (CORE_SWITCHES[4], 0x2),
+        (CORE_SWITCHES[5], 0x2),
+        (CORE_SWITCHES[6], 0x2),
+        (CORE_SWITCHES[7], 0x2),
+        (CORE_SWITCHES[8], 0x2),
+        (CORE_SWITCHES[9], 0x2),
     ];
 
     let mut intermediate_lhashes = vec![EXPECTED_RESULT[0]];
 
-    ROUTE.iter().fold(EXPECTED_RESULT[0], |last_lhash, (switch, exit_port)| {
+    ROUTE.iter().rev().fold(EXPECTED_RESULT[0], |last_lhash, (switch, exit_port)| {
         let to_hash = exit_port ^ last_lhash ^ u32::from(switch.id);
 
         // Creating a new one for every iteration, on purpose
@@ -61,7 +65,7 @@ const CORE_SWITCHES: [Switch; 10] = [
 // First is the initial hash, set by the edge, generated with `random()`
 const EXPECTED_RESULT: [Hash; 7] = [
     // Doing XORs
-    0x61e8d6e7, 0xae91434c, 0x08c97f5f, 0xeff1aad2, 0x08040c89, 0xaa99ae2e, 0x98670972,
+    0xabadcafe, 0xae91434c, 0x08c97f5f, 0xeff1aad2, 0x08040c89, 0xaa99ae2e, 0x98670972,
 ];
 
 #[cfg(test)]
@@ -126,7 +130,7 @@ mod tests {
 
         assert_eq!(intermediate_lhashes, EXPECTED_RESULT_NO_XORS);
     }
-    
+
     #[test]
     fn chained_crcs_single_constructor() {
         let mut intermediate_lhashes = vec![EXPECTED_RESULT_NO_XORS[0]];
