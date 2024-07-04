@@ -1,0 +1,149 @@
+*** DETOUR TEST ***
+*** Adding hosts
+*** Adding P4Switches (core)
+*** Adding P4Switches (edge)
+*** Creating links
+(10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) *** Replacing s5's links with compromised route
+*** Adding attacker
+*** Linking attacker
+(10.00Mbit) (10.00Mbit) *** Created link None(10.00Mbit) (10.00Mbit) *** Created link None(10.00Mbit) (10.00Mbit) *** Created link None(10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) *** Starting controller(s)
+
+*** Starting L2 nodes
+s1 ..⚡ simple_switch_grpc @ 553896 thrift @ 50001
+s2 ...⚡ simple_switch_grpc @ 553921 thrift @ 50002
+s3 ...⚡ simple_switch_grpc @ 553945 thrift @ 50003
+s4 ...⚡ simple_switch_grpc @ 553970 thrift @ 50004
+s5 ...⚡ simple_switch_grpc @ 553994 thrift @ 50005
+s6 ...⚡ simple_switch_grpc @ 554019 thrift @ 50006
+s7 ....⚡ simple_switch_grpc @ 554043 thrift @ 50007
+s8 ..⚡ simple_switch_grpc @ 554068 thrift @ 50008
+s9 ...⚡ simple_switch_grpc @ 554092 thrift @ 50009
+s10 .⚡ simple_switch_grpc @ 554116 thrift @ 50010
+e2 .⚡ simple_switch_grpc @ 554140 thrift @ 50102
+e3 ..⚡ simple_switch_grpc @ 554163 thrift @ 50103
+e4 ..⚡ simple_switch_grpc @ 554187 thrift @ 50104
+e5 ..⚡ simple_switch_grpc @ 554211 thrift @ 50105
+e6 ..⚡ simple_switch_grpc @ 554235 thrift @ 50106
+e7 ..⚡ simple_switch_grpc @ 554259 thrift @ 50107
+e8 ..⚡ simple_switch_grpc @ 554283 thrift @ 50108
+e9 ..⚡ simple_switch_grpc @ 554307 thrift @ 50109
+s555 ..⚡ simple_switch_grpc @ 554331 thrift @ 50555
+e1 ...⚡ simple_switch_grpc @ 554350 thrift @ 50101
+e10 ..⚡ simple_switch_grpc @ 554400 thrift @ 50110
+
+*** 👃 Sniffing on ['s1-eth1', 's1-eth2', 's2-eth1', 's2-eth2', 's2-eth3', 's3-eth1', 's3-eth2', 's3-eth3', 's4-eth1', 's4-eth2', 's4-eth3', 's5-eth1', 's5-eth2', 's5-eth3', 's5-eth4', 's6-eth1', 's6-eth2', 's6-eth3', 's7-eth1', 's7-eth2', 's7-eth3', 's7-eth4', 's8-eth1', 's8-eth2', 's8-eth3', 's9-eth1', 's9-eth2', 's9-eth3', 's10-eth1', 's10-eth2', 'e2-eth1', 'e2-eth2', 'e3-eth1', 'e3-eth2', 'e4-eth1', 'e4-eth2', 'e5-eth1', 'e5-eth2', 'e6-eth1', 'e6-eth2', 'e7-eth1', 'e7-eth2', 'e8-eth1', 'e8-eth2', 'e9-eth1', 'e9-eth2', 's555-eth0', 's555-eth1', 'e1-eth0', 'e1-eth1', 'e1-eth2', 'e10-eth1', 'e10-eth2']
+*** Testing network integrity
+    a ping from h1 to h10,
+    goes through all core switches.
+h1 -> *** h1 : ('ping -c1 -W 1 10.0.10.10',)
+PING 10.0.10.10 (10.0.10.10) 56(84) bytes of data.
+64 bytes from 10.0.10.10: icmp_seq=1 ttl=64 time=9.01 ms
+
+--- 10.0.10.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 9.008/9.008/9.008/0.000 ms
+h10 
+h10 -> *** h10 : ('ping -c1 -W 1 10.0.1.1',)
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_seq=1 ttl=64 time=7.01 ms
+
+--- 10.0.1.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 7.008/7.008/7.008/0.000 ms
+h1 
+*** Results: 0% dropped (2/2 received)
+*** Stopping sniffing
+*** Checking collected packets
+*** 🔍 Tracing new route
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:e1-eth2 ✅ ok
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:s1-eth1 ✅ ok
+*** Comparing 0x3ef96770, expects 0x3ef96770 on node 0x002b:s1-eth2 ✅ ok
+*** Comparing 0x3ef96770, expects 0x3ef96770 on node 0x002b:s2-eth2 ✅ ok
+*** Comparing 0x2dca9942, expects 0x2dca9942 on node 0x002d:s2-eth3 ✅ ok
+*** Comparing 0x2dca9942, expects 0x2dca9942 on node 0x002d:s3-eth2 ✅ ok
+*** Comparing 0x11797334, expects 0x11797334 on node 0x0039:s3-eth3 ✅ ok
+*** Comparing 0x11797334, expects 0x11797334 on node 0x0039:s4-eth2 ✅ ok
+*** Comparing 0x98081e3e, expects 0x98081e3e on node 0x003f:s4-eth3 ✅ ok
+*** Comparing 0x98081e3e, expects 0x98081e3e on node 0x003f:s5-eth2 ✅ ok
+*** Comparing 0x3332e012, expects 0x3332e012 on node 0x0047:s5-eth3 ✅ ok
+*** Comparing 0x3332e012, expects 0x3332e012 on node 0x0047:s555-eth0 ✅ ok
+*** Comparing 0x90a0df94, expects 0x22996afd on node 0x0047:s555-eth1 ❌ Digest does not match
+*** Comparing 0x90a0df94, expects 0x22996afd on node 0x0047:s7-eth2 ❌ Digest does not match
+*** Comparing 0xbebe4372, expects 0x8fa3987d on node 0x008d:s7-eth3 ❌ Digest does not match
+*** Comparing 0xbebe4372, expects 0x8fa3987d on node 0x008d:s8-eth2 ❌ Digest does not match
+*** Comparing 0x5aafa7f2, expects 0xf4b50950 on node 0x00bd:s8-eth3 ❌ Digest does not match
+*** Comparing 0x5aafa7f2, expects 0xf4b50950 on node 0x00bd:s9-eth2 ❌ Digest does not match
+*** Comparing 0x649b8554, expects 0xd0c29e67 on node 0x00d7:s9-eth3 ❌ Digest does not match
+*** Comparing 0x649b8554, expects 0xd0c29e67 on node 0x00d7:s10-eth2 ❌ Digest does not match
+*** Comparing 0xf46427bf, expects 0x13ff41c1 on node 0x00f5:s10-eth1 ❌ Digest does not match
+*** Comparing 0xf46427bf, expects 0x13ff41c1 on node 0x00f5:e10-eth2 ❌ Digest does not match
+*** 🔍 Tracing new route
+*** Comparing 0xdeadbeef, expects 0xdeadbeef on node 0x00ff:e10-eth2 ✅ ok
+*** Comparing 0xdeadbeef, expects 0xdeadbeef on node 0x00ff:s10-eth1 ✅ ok
+*** Comparing 0x5f45c4e5, expects 0x5f45c4e5 on node 0x00f5:s10-eth2 ✅ ok
+*** Comparing 0x5f45c4e5, expects 0x5f45c4e5 on node 0x00f5:s9-eth3 ✅ ok
+*** Comparing 0x4d34ad25, expects 0x4d34ad25 on node 0x00d7:s9-eth2 ✅ ok
+*** Comparing 0x4d34ad25, expects 0x4d34ad25 on node 0x00d7:s8-eth3 ✅ ok
+*** Comparing 0x602baa4e, expects 0x602baa4e on node 0x00bd:s8-eth2 ✅ ok
+*** Comparing 0x602baa4e, expects 0x602baa4e on node 0x00bd:s7-eth3 ✅ ok
+*** Comparing 0x96f1275b, expects 0x96f1275b on node 0x008d:s7-eth2 ✅ ok
+*** Comparing 0x96f1275b, expects 0x96f1275b on node 0x008d:s555-eth1 ✅ ok
+*** Comparing 0xf247a607, expects 0x377923f8 on node 0x008d:s555-eth0 ❌ Digest does not match
+*** Comparing 0xf247a607, expects 0x377923f8 on node 0x008d:s5-eth3 ❌ Digest does not match
+*** Comparing 0x1871a1a6, expects 0x1ce1f48b on node 0x0047:s5-eth2 ❌ Digest does not match
+*** Comparing 0x1871a1a6, expects 0x1ce1f48b on node 0x0047:s4-eth3 ❌ Digest does not match
+*** Comparing 0x311b656f, expects 0xc179bfac on node 0x003f:s4-eth2 ❌ Digest does not match
+*** Comparing 0x311b656f, expects 0xc179bfac on node 0x003f:s3-eth3 ❌ Digest does not match
+*** Comparing 0x0d2c0646, expects 0xb9a3b130 on node 0x0039:s3-eth2 ❌ Digest does not match
+*** Comparing 0x0d2c0646, expects 0xb9a3b130 on node 0x0039:s2-eth3 ❌ Digest does not match
+*** Comparing 0x804dc63f, expects 0xead6af39 on node 0x002d:s2-eth2 ❌ Digest does not match
+*** Comparing 0x804dc63f, expects 0xead6af39 on node 0x002d:s1-eth2 ❌ Digest does not match
+*** Comparing 0x4422e397, expects 0xbca3d63a on node 0x002b:s1-eth1 ❌ Digest does not match
+*** Comparing 0x4422e397, expects 0xbca3d63a on node 0x002b:e1-eth2 ❌ Digest does not match
+*** 🔍 Tracing new route
+*** Comparing 0xdeadbeef, expects 0xdeadbeef on node 0x00ff:e10-eth2 ✅ ok
+*** Comparing 0xdeadbeef, expects 0xdeadbeef on node 0x00ff:s10-eth1 ✅ ok
+*** Comparing 0x5f45c4e5, expects 0x5f45c4e5 on node 0x00f5:s10-eth2 ✅ ok
+*** Comparing 0x5f45c4e5, expects 0x5f45c4e5 on node 0x00f5:s9-eth3 ✅ ok
+*** Comparing 0x4d34ad25, expects 0x4d34ad25 on node 0x00d7:s9-eth2 ✅ ok
+*** Comparing 0x4d34ad25, expects 0x4d34ad25 on node 0x00d7:s8-eth3 ✅ ok
+*** Comparing 0x602baa4e, expects 0x602baa4e on node 0x00bd:s8-eth2 ✅ ok
+*** Comparing 0x602baa4e, expects 0x602baa4e on node 0x00bd:s7-eth3 ✅ ok
+*** Comparing 0x96f1275b, expects 0x96f1275b on node 0x008d:s7-eth2 ✅ ok
+*** Comparing 0x96f1275b, expects 0x96f1275b on node 0x008d:s555-eth1 ✅ ok
+*** Comparing 0xf247a607, expects 0x377923f8 on node 0x008d:s555-eth0 ❌ Digest does not match
+*** Comparing 0xf247a607, expects 0x377923f8 on node 0x008d:s5-eth3 ❌ Digest does not match
+*** Comparing 0x1871a1a6, expects 0x1ce1f48b on node 0x0047:s5-eth2 ❌ Digest does not match
+*** Comparing 0x1871a1a6, expects 0x1ce1f48b on node 0x0047:s4-eth3 ❌ Digest does not match
+*** Comparing 0x311b656f, expects 0xc179bfac on node 0x003f:s4-eth2 ❌ Digest does not match
+*** Comparing 0x311b656f, expects 0xc179bfac on node 0x003f:s3-eth3 ❌ Digest does not match
+*** Comparing 0x0d2c0646, expects 0xb9a3b130 on node 0x0039:s3-eth2 ❌ Digest does not match
+*** Comparing 0x0d2c0646, expects 0xb9a3b130 on node 0x0039:s2-eth3 ❌ Digest does not match
+*** Comparing 0x804dc63f, expects 0xead6af39 on node 0x002d:s2-eth2 ❌ Digest does not match
+*** Comparing 0x804dc63f, expects 0xead6af39 on node 0x002d:s1-eth2 ❌ Digest does not match
+*** Comparing 0x4422e397, expects 0xbca3d63a on node 0x002b:s1-eth1 ❌ Digest does not match
+*** Comparing 0x4422e397, expects 0xbca3d63a on node 0x002b:e1-eth2 ❌ Digest does not match
+*** 🔍 Tracing new route
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:e1-eth2 ✅ ok
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:s1-eth1 ✅ ok
+*** Comparing 0x3ef96770, expects 0x3ef96770 on node 0x002b:s1-eth2 ✅ ok
+*** Comparing 0x3ef96770, expects 0x3ef96770 on node 0x002b:s2-eth2 ✅ ok
+*** Comparing 0x2dca9942, expects 0x2dca9942 on node 0x002d:s2-eth3 ✅ ok
+*** Comparing 0x2dca9942, expects 0x2dca9942 on node 0x002d:s3-eth2 ✅ ok
+*** Comparing 0x11797334, expects 0x11797334 on node 0x0039:s3-eth3 ✅ ok
+*** Comparing 0x11797334, expects 0x11797334 on node 0x0039:s4-eth2 ✅ ok
+*** Comparing 0x98081e3e, expects 0x98081e3e on node 0x003f:s4-eth3 ✅ ok
+*** Comparing 0x98081e3e, expects 0x98081e3e on node 0x003f:s5-eth2 ✅ ok
+*** Comparing 0x3332e012, expects 0x3332e012 on node 0x0047:s5-eth3 ✅ ok
+*** Comparing 0x3332e012, expects 0x3332e012 on node 0x0047:s555-eth0 ✅ ok
+*** Comparing 0x90a0df94, expects 0x22996afd on node 0x0047:s555-eth1 ❌ Digest does not match
+*** Comparing 0x90a0df94, expects 0x22996afd on node 0x0047:s7-eth2 ❌ Digest does not match
+*** Comparing 0xbebe4372, expects 0x8fa3987d on node 0x008d:s7-eth3 ❌ Digest does not match
+*** Comparing 0xbebe4372, expects 0x8fa3987d on node 0x008d:s8-eth2 ❌ Digest does not match
+*** Comparing 0x5aafa7f2, expects 0xf4b50950 on node 0x00bd:s8-eth3 ❌ Digest does not match
+*** Comparing 0x5aafa7f2, expects 0xf4b50950 on node 0x00bd:s9-eth2 ❌ Digest does not match
+*** Comparing 0x649b8554, expects 0xd0c29e67 on node 0x00d7:s9-eth3 ❌ Digest does not match
+*** Comparing 0x649b8554, expects 0xd0c29e67 on node 0x00d7:s10-eth2 ❌ Digest does not match
+*** Comparing 0xf46427bf, expects 0x13ff41c1 on node 0x00f5:s10-eth1 ❌ Digest does not match
+*** Comparing 0xf46427bf, expects 0x13ff41c1 on node 0x00f5:e10-eth2 ❌ Digest does not match
+*** DETOUR TEST DONE ***

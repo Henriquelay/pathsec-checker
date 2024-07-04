@@ -14,7 +14,7 @@ fn main() {
     // A route for a packet going from h1 to h6, dependant on the topology
     // This is just the example captured in the wireshark snapshot
     const ROUTE: [(Switch, Port); 10] = [
-        (CORE_SWITCHES[0], 0x1),
+        (CORE_SWITCHES[0], 0x2),
         (CORE_SWITCHES[1], 0x2),
         (CORE_SWITCHES[2], 0x2),
         (CORE_SWITCHES[3], 0x2),
@@ -65,7 +65,7 @@ const CORE_SWITCHES: [Switch; 10] = [
 // First is the initial hash, set by the edge, generated with `random()`
 const EXPECTED_RESULT: [Hash; 7] = [
     // Doing XORs
-    0xabadcafe, 0xae91434c, 0x08c97f5f, 0xeff1aad2, 0x08040c89, 0xaa99ae2e, 0x98670972,
+    0xbaddc0de, 0xae91434c, 0x08c97f5f, 0xeff1aad2, 0x08040c89, 0xaa99ae2e, 0x98670972,
 ];
 
 #[cfg(test)]

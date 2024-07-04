@@ -1,0 +1,231 @@
+*** SKIPPING TEST ***
+*** Adding hosts
+*** Adding P4Switches (core)
+*** Adding P4Switches (edge)
+*** Creating links
+(10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) *** Replacing s5's links with compromised route
+(10.00Mbit) (10.00Mbit) ### Created link None
+(10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) (10.00Mbit) *** Starting controller(s)
+
+*** Starting L2 nodes
+s1 ..⚡ simple_switch_grpc @ 541790 thrift @ 50001
+s2 ...⚡ simple_switch_grpc @ 541813 thrift @ 50002
+s3 ...⚡ simple_switch_grpc @ 541838 thrift @ 50003
+s4 ...⚡ simple_switch_grpc @ 541862 thrift @ 50004
+s5 .⚡ simple_switch_grpc @ 541887 thrift @ 50005
+s6 ...⚡ simple_switch_grpc @ 541910 thrift @ 50006
+s7 ...⚡ simple_switch_grpc @ 541935 thrift @ 50007
+s8 ...⚡ simple_switch_grpc @ 541959 thrift @ 50008
+s9 ...⚡ simple_switch_grpc @ 541984 thrift @ 50009
+s10 ..⚡ simple_switch_grpc @ 542008 thrift @ 50010
+e2 ..⚡ simple_switch_grpc @ 542032 thrift @ 50102
+e3 ..⚡ simple_switch_grpc @ 542056 thrift @ 50103
+e4 ..⚡ simple_switch_grpc @ 542080 thrift @ 50104
+e5 ..⚡ simple_switch_grpc @ 542104 thrift @ 50105
+e6 ..⚡ simple_switch_grpc @ 542128 thrift @ 50106
+e7 ..⚡ simple_switch_grpc @ 542152 thrift @ 50107
+e8 ..⚡ simple_switch_grpc @ 542176 thrift @ 50108
+e9 ..⚡ simple_switch_grpc @ 542200 thrift @ 50109
+e1 ...⚡ simple_switch_grpc @ 542223 thrift @ 50101
+e10 ..⚡ simple_switch_grpc @ 542273 thrift @ 50110
+
+*** 👃 Sniffing on ['s1-eth1', 's1-eth2', 's2-eth1', 's2-eth2', 's2-eth3', 's3-eth1', 's3-eth2', 's3-eth3', 's4-eth1', 's4-eth2', 's4-eth3', 's5-eth1', 's6-eth1', 's6-eth2', 's6-eth3', 's7-eth1', 's7-eth2', 's7-eth3', 's8-eth1', 's8-eth2', 's8-eth3', 's9-eth1', 's9-eth2', 's9-eth3', 's10-eth1', 's10-eth2', 'e2-eth1', 'e2-eth2', 'e3-eth1', 'e3-eth2', 'e4-eth1', 'e4-eth2', 'e5-eth1', 'e5-eth2', 'e6-eth1', 'e6-eth2', 'e7-eth1', 'e7-eth2', 'e8-eth1', 'e8-eth2', 'e9-eth1', 'e9-eth2', 'e1-eth0', 'e1-eth1', 'e1-eth2', 'e10-eth1', 'e10-eth2']
+*** Testing network integrity
+    a ping from h1 to h10,
+    goes through all core switches.
+h1 -> *** h1 : ('ping -c1 -W 1 10.0.10.10',)
+PING 10.0.10.10 (10.0.10.10) 56(84) bytes of data.
+64 bytes from 10.0.10.10: icmp_seq=1 ttl=64 time=8.37 ms
+
+--- 10.0.10.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 8.373/8.373/8.373/0.000 ms
+h10 
+h10 -> *** h10 : ('ping -c1 -W 1 10.0.1.1',)
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_seq=1 ttl=64 time=6.52 ms
+
+--- 10.0.1.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 6.524/6.524/6.524/0.000 ms
+h1 
+*** Results: 0% dropped (2/2 received)
+*** Stopping sniffing
+0x61e8d6e7, 0x61e8d6e7
+0x61e8d6e7, 0x61e8d6e7
+0xae91434c, 0x61e8d6e7
+0xae91434c, 0x61e8d6e7
+0x08c97f5f, 0x61e8d6e7
+0x08c97f5f, 0x61e8d6e7
+0xeff1aad2, 0x61e8d6e7
+0xeff1aad2, 0x61e8d6e7
+0x08040c89, 0x61e8d6e7
+0x08040c89, 0x61e8d6e7
+0xb0437a53, 0x61e8d6e7
+0xb0437a53, 0x61e8d6e7
+0x63589d0a, 0x61e8d6e7
+0x63589d0a, 0x61e8d6e7
+0x629b7b3b, 0x61e8d6e7
+0x629b7b3b, 0x61e8d6e7
+0xbd53e851, 0x61e8d6e7
+0xbd53e851, 0x61e8d6e7
+0x90bdf731, 0x61e8d6e7
+0x90bdf731, 0x61e8d6e7
+0xabadcafe, 0xabadcafe
+0xabadcafe, 0xabadcafe
+0x2247084b, 0xabadcafe
+0x2247084b, 0xabadcafe
+0x81c417a7, 0xabadcafe
+0x81c417a7, 0xabadcafe
+0xf4e82c1e, 0xabadcafe
+0xf4e82c1e, 0xabadcafe
+0x31881788, 0xabadcafe
+0x31881788, 0xabadcafe
+0x7c79e406, 0xabadcafe
+0x7c79e406, 0xabadcafe
+0xd0944c2b, 0xabadcafe
+0xd0944c2b, 0xabadcafe
+0xbc7166c4, 0xabadcafe
+0xbc7166c4, 0xabadcafe
+0x27acdb88, 0xabadcafe
+0x27acdb88, 0xabadcafe
+0x96d7328f, 0xabadcafe
+0x96d7328f, 0xabadcafe
+0xabadcafe, 0xabadcafe
+0xabadcafe, 0xabadcafe
+0x2247084b, 0xabadcafe
+0x2247084b, 0xabadcafe
+0x81c417a7, 0xabadcafe
+0x81c417a7, 0xabadcafe
+0xf4e82c1e, 0xabadcafe
+0xf4e82c1e, 0xabadcafe
+0x31881788, 0xabadcafe
+0x31881788, 0xabadcafe
+0x7c79e406, 0xabadcafe
+0x7c79e406, 0xabadcafe
+0xd0944c2b, 0xabadcafe
+0xd0944c2b, 0xabadcafe
+0xbc7166c4, 0xabadcafe
+0xbc7166c4, 0xabadcafe
+0x27acdb88, 0xabadcafe
+0x27acdb88, 0xabadcafe
+0x96d7328f, 0xabadcafe
+0x96d7328f, 0xabadcafe
+0x61e8d6e7, 0x61e8d6e7
+0x61e8d6e7, 0x61e8d6e7
+0xae91434c, 0x61e8d6e7
+0xae91434c, 0x61e8d6e7
+0x08c97f5f, 0x61e8d6e7
+0x08c97f5f, 0x61e8d6e7
+0xeff1aad2, 0x61e8d6e7
+0xeff1aad2, 0x61e8d6e7
+0x08040c89, 0x61e8d6e7
+0x08040c89, 0x61e8d6e7
+0xb0437a53, 0x61e8d6e7
+0xb0437a53, 0x61e8d6e7
+0x63589d0a, 0x61e8d6e7
+0x63589d0a, 0x61e8d6e7
+0x629b7b3b, 0x61e8d6e7
+0x629b7b3b, 0x61e8d6e7
+0xbd53e851, 0x61e8d6e7
+0xbd53e851, 0x61e8d6e7
+0x90bdf731, 0x61e8d6e7
+0x90bdf731, 0x61e8d6e7
+*** Checking collected packets
+*** 🔍 Tracing new route
+*** Comparing 0x61e8d6e7, expects 0x61e8d6e7 on node 0x00ff:e1-eth2 ✅ ok
+*** Comparing 0x61e8d6e7, expects 0x61e8d6e7 on node 0x00ff:s1-eth1 ✅ ok
+*** Comparing 0xae91434c, expects 0xae91434c on node 0x002b:s1-eth2 ✅ ok
+*** Comparing 0xae91434c, expects 0xae91434c on node 0x002b:s2-eth2 ✅ ok
+*** Comparing 0x08c97f5f, expects 0x08c97f5f on node 0x002d:s2-eth3 ✅ ok
+*** Comparing 0x08c97f5f, expects 0x08c97f5f on node 0x002d:s3-eth2 ✅ ok
+*** Comparing 0xeff1aad2, expects 0xeff1aad2 on node 0x0039:s3-eth3 ✅ ok
+*** Comparing 0xeff1aad2, expects 0xeff1aad2 on node 0x0039:s4-eth2 ✅ ok
+*** Comparing 0x08040c89, expects 0x08040c89 on node 0x003f:s4-eth3 ✅ ok
+*** Comparing 0x08040c89, expects 0x08040c89 on node 0x003f:s6-eth2 ✅ ok
+*** Comparing 0xb0437a53, expects 0xaa99ae2e on node 0x0053:s6-eth3 ❌ Digest does not match
+*** Comparing 0xb0437a53, expects 0xaa99ae2e on node 0x0053:s7-eth2 ❌ Digest does not match
+*** Comparing 0x63589d0a, expects 0x7669685e on node 0x008d:s7-eth3 ❌ Digest does not match
+*** Comparing 0x63589d0a, expects 0x7669685e on node 0x008d:s8-eth2 ❌ Digest does not match
+*** Comparing 0x629b7b3b, expects 0x03e1e388 on node 0x00bd:s8-eth3 ❌ Digest does not match
+*** Comparing 0x629b7b3b, expects 0x03e1e388 on node 0x00bd:s9-eth2 ❌ Digest does not match
+*** Comparing 0xbd53e851, expects 0x2138ffd3 on node 0x00d7:s9-eth3 ❌ Digest does not match
+*** Comparing 0xbd53e851, expects 0x2138ffd3 on node 0x00d7:s10-eth2 ❌ Digest does not match
+*** Comparing 0x90bdf731, expects 0x1ef2cbbe on node 0x00f5:s10-eth1 ❌ Digest does not match
+*** Comparing 0x90bdf731, expects 0x1ef2cbbe on node 0x00f5:e10-eth2 ❌ Digest does not match
+*** ❌ Route length does not match expected. Expected 22, got 20
+*** Missing digest 0x99c5fe05
+*** Missing digest 0x99c5fe05
+*** 🔍 Tracing new route
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:e10-eth2 ✅ ok
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:s10-eth1 ✅ ok
+*** Comparing 0x2247084b, expects 0x2247084b on node 0x00f5:s10-eth2 ✅ ok
+*** Comparing 0x2247084b, expects 0x2247084b on node 0x00f5:s9-eth3 ✅ ok
+*** Comparing 0x81c417a7, expects 0x81c417a7 on node 0x00d7:s9-eth2 ✅ ok
+*** Comparing 0x81c417a7, expects 0x81c417a7 on node 0x00d7:s8-eth3 ✅ ok
+*** Comparing 0xf4e82c1e, expects 0xf4e82c1e on node 0x00bd:s8-eth2 ✅ ok
+*** Comparing 0xf4e82c1e, expects 0xf4e82c1e on node 0x00bd:s7-eth3 ✅ ok
+*** Comparing 0x31881788, expects 0x31881788 on node 0x008d:s7-eth2 ✅ ok
+*** Comparing 0x31881788, expects 0x31881788 on node 0x008d:s6-eth3 ✅ ok
+*** Comparing 0x7c79e406, expects 0x7c79e406 on node 0x0053:s6-eth2 ✅ ok
+*** Comparing 0x7c79e406, expects 0x7c79e406 on node 0x0053:s4-eth3 ✅ ok
+*** Comparing 0xd0944c2b, expects 0x8e4ab525 on node 0x003f:s4-eth2 ❌ Digest does not match
+*** Comparing 0xd0944c2b, expects 0x8e4ab525 on node 0x003f:s3-eth3 ❌ Digest does not match
+*** Comparing 0xbc7166c4, expects 0xdb11d4a9 on node 0x0039:s3-eth2 ❌ Digest does not match
+*** Comparing 0xbc7166c4, expects 0xdb11d4a9 on node 0x0039:s2-eth3 ❌ Digest does not match
+*** Comparing 0x27acdb88, expects 0x36a0dab0 on node 0x002d:s2-eth2 ❌ Digest does not match
+*** Comparing 0x27acdb88, expects 0x36a0dab0 on node 0x002d:s1-eth2 ❌ Digest does not match
+*** Comparing 0x96d7328f, expects 0x361b8641 on node 0x002b:s1-eth1 ❌ Digest does not match
+*** Comparing 0x96d7328f, expects 0x361b8641 on node 0x002b:e1-eth2 ❌ Digest does not match
+*** ❌ Route length does not match expected. Expected 22, got 20
+*** Missing digest 0x53ceb3ed
+*** Missing digest 0x53ceb3ed
+*** 🔍 Tracing new route
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:e10-eth2 ✅ ok
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:s10-eth1 ✅ ok
+*** Comparing 0x2247084b, expects 0x2247084b on node 0x00f5:s10-eth2 ✅ ok
+*** Comparing 0x2247084b, expects 0x2247084b on node 0x00f5:s9-eth3 ✅ ok
+*** Comparing 0x81c417a7, expects 0x81c417a7 on node 0x00d7:s9-eth2 ✅ ok
+*** Comparing 0x81c417a7, expects 0x81c417a7 on node 0x00d7:s8-eth3 ✅ ok
+*** Comparing 0xf4e82c1e, expects 0xf4e82c1e on node 0x00bd:s8-eth2 ✅ ok
+*** Comparing 0xf4e82c1e, expects 0xf4e82c1e on node 0x00bd:s7-eth3 ✅ ok
+*** Comparing 0x31881788, expects 0x31881788 on node 0x008d:s7-eth2 ✅ ok
+*** Comparing 0x31881788, expects 0x31881788 on node 0x008d:s6-eth3 ✅ ok
+*** Comparing 0x7c79e406, expects 0x7c79e406 on node 0x0053:s6-eth2 ✅ ok
+*** Comparing 0x7c79e406, expects 0x7c79e406 on node 0x0053:s4-eth3 ✅ ok
+*** Comparing 0xd0944c2b, expects 0x8e4ab525 on node 0x003f:s4-eth2 ❌ Digest does not match
+*** Comparing 0xd0944c2b, expects 0x8e4ab525 on node 0x003f:s3-eth3 ❌ Digest does not match
+*** Comparing 0xbc7166c4, expects 0xdb11d4a9 on node 0x0039:s3-eth2 ❌ Digest does not match
+*** Comparing 0xbc7166c4, expects 0xdb11d4a9 on node 0x0039:s2-eth3 ❌ Digest does not match
+*** Comparing 0x27acdb88, expects 0x36a0dab0 on node 0x002d:s2-eth2 ❌ Digest does not match
+*** Comparing 0x27acdb88, expects 0x36a0dab0 on node 0x002d:s1-eth2 ❌ Digest does not match
+*** Comparing 0x96d7328f, expects 0x361b8641 on node 0x002b:s1-eth1 ❌ Digest does not match
+*** Comparing 0x96d7328f, expects 0x361b8641 on node 0x002b:e1-eth2 ❌ Digest does not match
+*** ❌ Route length does not match expected. Expected 22, got 20
+*** Missing digest 0x53ceb3ed
+*** Missing digest 0x53ceb3ed
+*** 🔍 Tracing new route
+*** Comparing 0x61e8d6e7, expects 0x61e8d6e7 on node 0x00ff:e1-eth2 ✅ ok
+*** Comparing 0x61e8d6e7, expects 0x61e8d6e7 on node 0x00ff:s1-eth1 ✅ ok
+*** Comparing 0xae91434c, expects 0xae91434c on node 0x002b:s1-eth2 ✅ ok
+*** Comparing 0xae91434c, expects 0xae91434c on node 0x002b:s2-eth2 ✅ ok
+*** Comparing 0x08c97f5f, expects 0x08c97f5f on node 0x002d:s2-eth3 ✅ ok
+*** Comparing 0x08c97f5f, expects 0x08c97f5f on node 0x002d:s3-eth2 ✅ ok
+*** Comparing 0xeff1aad2, expects 0xeff1aad2 on node 0x0039:s3-eth3 ✅ ok
+*** Comparing 0xeff1aad2, expects 0xeff1aad2 on node 0x0039:s4-eth2 ✅ ok
+*** Comparing 0x08040c89, expects 0x08040c89 on node 0x003f:s4-eth3 ✅ ok
+*** Comparing 0x08040c89, expects 0x08040c89 on node 0x003f:s6-eth2 ✅ ok
+*** Comparing 0xb0437a53, expects 0xaa99ae2e on node 0x0053:s6-eth3 ❌ Digest does not match
+*** Comparing 0xb0437a53, expects 0xaa99ae2e on node 0x0053:s7-eth2 ❌ Digest does not match
+*** Comparing 0x63589d0a, expects 0x7669685e on node 0x008d:s7-eth3 ❌ Digest does not match
+*** Comparing 0x63589d0a, expects 0x7669685e on node 0x008d:s8-eth2 ❌ Digest does not match
+*** Comparing 0x629b7b3b, expects 0x03e1e388 on node 0x00bd:s8-eth3 ❌ Digest does not match
+*** Comparing 0x629b7b3b, expects 0x03e1e388 on node 0x00bd:s9-eth2 ❌ Digest does not match
+*** Comparing 0xbd53e851, expects 0x2138ffd3 on node 0x00d7:s9-eth3 ❌ Digest does not match
+*** Comparing 0xbd53e851, expects 0x2138ffd3 on node 0x00d7:s10-eth2 ❌ Digest does not match
+*** Comparing 0x90bdf731, expects 0x1ef2cbbe on node 0x00f5:s10-eth1 ❌ Digest does not match
+*** Comparing 0x90bdf731, expects 0x1ef2cbbe on node 0x00f5:e10-eth2 ❌ Digest does not match
+*** ❌ Route length does not match expected. Expected 22, got 20
+*** Missing digest 0x99c5fe05
+*** Missing digest 0x99c5fe05
+*** SKIPPING TEST DONE ***
