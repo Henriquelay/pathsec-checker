@@ -1,0 +1,93 @@
+*** 🔍 Tracing new route
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:e1-eth2 ✅ ok
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:s1-eth1 ✅ ok
+*** Comparing 0x432cf798, expects 0x432cf798 on node 0x002b:s1-eth2 ✅ ok
+*** Comparing 0x432cf798, expects 0x432cf798 on node 0x002b:s2-eth2 ✅ ok
+*** Comparing 0xe04df688, expects 0xe04df688 on node 0x002d:s2-eth3 ✅ ok
+*** Comparing 0xe04df688, expects 0xe04df688 on node 0x002d:s3-eth2 ✅ ok
+*** Comparing 0xe8f0142c, expects 0xe8f0142c on node 0x0039:s3-eth3 ✅ ok
+*** Comparing 0xe8f0142c, expects 0xe8f0142c on node 0x0039:s4-eth2 ✅ ok
+*** Comparing 0xb452022a, expects 0xb452022a on node 0x003f:s4-eth3 ✅ ok
+*** Comparing 0xb452022a, expects 0xb452022a on node 0x003f:s6-eth2 ✅ ok
+*** Comparing 0x5e8a06af, expects 0x4450d2d2 on node 0x0053:s6-eth3 ❌ Digest does not match
+*** Comparing 0x5e8a06af, expects 0x4450d2d2 on node 0x0053:s5-eth2 ❌ Digest does not match
+*** Comparing 0x87b6a5ad, expects 0xe9367b57 on node 0x0047:s5-eth3 ❌ Digest does not match
+*** Comparing 0x87b6a5ad, expects 0xe9367b57 on node 0x0047:s7-eth2 ❌ Digest does not match
+*** Comparing 0xe10eeae2, expects 0x991182c1 on node 0x008d:s7-eth3 ❌ Digest does not match
+*** Comparing 0xe10eeae2, expects 0x991182c1 on node 0x008d:s8-eth2 ❌ Digest does not match
+*** Comparing 0x8355d2f2, expects 0x35e72e11 on node 0x00bd:s8-eth3 ❌ Digest does not match
+*** Comparing 0x8355d2f2, expects 0x35e72e11 on node 0x00bd:s9-eth2 ❌ Digest does not match
+*** Comparing 0xd5dc08f2, expects 0xaa152eb9 on node 0x00d7:s9-eth3 ❌ Digest does not match
+*** Comparing 0xd5dc08f2, expects 0xaa152eb9 on node 0x00d7:s10-eth2 ❌ Digest does not match
+*** Comparing 0x95e775de, expects 0x1a1573e7 on node 0x00f5:s10-eth1 ❌ Digest does not match
+*** Comparing 0x95e775de, expects 0x1a1573e7 on node 0x00f5:e10-eth2 ❌ Digest does not match
+*** 🔍 Tracing new route
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:e10-eth2 ✅ ok
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:s10-eth1 ✅ ok
+*** Comparing 0x5f9298a3, expects 0x5f9298a3 on node 0x00f5:s10-eth2 ✅ ok
+*** Comparing 0x5f9298a3, expects 0x5f9298a3 on node 0x00f5:s9-eth3 ✅ ok
+*** Comparing 0x4c43786d, expects 0x4c43786d on node 0x00d7:s9-eth2 ✅ ok
+*** Comparing 0x4c43786d, expects 0x4c43786d on node 0x00d7:s8-eth3 ✅ ok
+*** Comparing 0x0d614b06, expects 0x0d614b06 on node 0x00bd:s8-eth2 ✅ ok
+*** Comparing 0x0d614b06, expects 0x0d614b06 on node 0x00bd:s7-eth3 ✅ ok
+*** Comparing 0x1dd20b9c, expects 0x1dd20b9c on node 0x008d:s7-eth2 ✅ ok
+*** Comparing 0x1dd20b9c, expects 0x1dd20b9c on node 0x008d:s5-eth3 ✅ ok
+*** Comparing 0x11c102bb, expects 0x0b1bd6c6 on node 0x0047:s5-eth2 ❌ Digest does not match
+*** Comparing 0x11c102bb, expects 0x0b1bd6c6 on node 0x0047:s6-eth3 ❌ Digest does not match
+*** Comparing 0x2b657a75, expects 0x45e5a48f on node 0x0053:s6-eth2 ❌ Digest does not match
+*** Comparing 0x2b657a75, expects 0x45e5a48f on node 0x0053:s4-eth3 ❌ Digest does not match
+*** Comparing 0xb5bca636, expects 0xcda3ce15 on node 0x003f:s4-eth2 ❌ Digest does not match
+*** Comparing 0xb5bca636, expects 0xcda3ce15 on node 0x003f:s3-eth3 ❌ Digest does not match
+*** Comparing 0x41400112, expects 0xf7f2fdf1 on node 0x0039:s3-eth2 ❌ Digest does not match
+*** Comparing 0x41400112, expects 0xf7f2fdf1 on node 0x0039:s2-eth3 ❌ Digest does not match
+*** Comparing 0x330510d4, expects 0x4ccc369f on node 0x002d:s2-eth2 ❌ Digest does not match
+*** Comparing 0x330510d4, expects 0x4ccc369f on node 0x002d:s1-eth2 ❌ Digest does not match
+*** Comparing 0xd5d687f2, expects 0x5a2481cb on node 0x002b:s1-eth1 ❌ Digest does not match
+*** Comparing 0xd5d687f2, expects 0x5a2481cb on node 0x002b:e1-eth2 ❌ Digest does not match
+*** 🔍 Tracing new route
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:e10-eth2 ✅ ok
+*** Comparing 0xbaddc0de, expects 0xbaddc0de on node 0x00ff:s10-eth1 ✅ ok
+*** Comparing 0x5f9298a3, expects 0x5f9298a3 on node 0x00f5:s10-eth2 ✅ ok
+*** Comparing 0x5f9298a3, expects 0x5f9298a3 on node 0x00f5:s9-eth3 ✅ ok
+*** Comparing 0x4c43786d, expects 0x4c43786d on node 0x00d7:s9-eth2 ✅ ok
+*** Comparing 0x4c43786d, expects 0x4c43786d on node 0x00d7:s8-eth3 ✅ ok
+*** Comparing 0x0d614b06, expects 0x0d614b06 on node 0x00bd:s8-eth2 ✅ ok
+*** Comparing 0x0d614b06, expects 0x0d614b06 on node 0x00bd:s7-eth3 ✅ ok
+*** Comparing 0x1dd20b9c, expects 0x1dd20b9c on node 0x008d:s7-eth2 ✅ ok
+*** Comparing 0x1dd20b9c, expects 0x1dd20b9c on node 0x008d:s5-eth3 ✅ ok
+*** Comparing 0x11c102bb, expects 0x0b1bd6c6 on node 0x0047:s5-eth2 ❌ Digest does not match
+*** Comparing 0x11c102bb, expects 0x0b1bd6c6 on node 0x0047:s6-eth3 ❌ Digest does not match
+*** Comparing 0x2b657a75, expects 0x45e5a48f on node 0x0053:s6-eth2 ❌ Digest does not match
+*** Comparing 0x2b657a75, expects 0x45e5a48f on node 0x0053:s4-eth3 ❌ Digest does not match
+*** Comparing 0xb5bca636, expects 0xcda3ce15 on node 0x003f:s4-eth2 ❌ Digest does not match
+*** Comparing 0xb5bca636, expects 0xcda3ce15 on node 0x003f:s3-eth3 ❌ Digest does not match
+*** Comparing 0x41400112, expects 0xf7f2fdf1 on node 0x0039:s3-eth2 ❌ Digest does not match
+*** Comparing 0x41400112, expects 0xf7f2fdf1 on node 0x0039:s2-eth3 ❌ Digest does not match
+*** Comparing 0x330510d4, expects 0x4ccc369f on node 0x002d:s2-eth2 ❌ Digest does not match
+*** Comparing 0x330510d4, expects 0x4ccc369f on node 0x002d:s1-eth2 ❌ Digest does not match
+*** Comparing 0xd5d687f2, expects 0x5a2481cb on node 0x002b:s1-eth1 ❌ Digest does not match
+*** Comparing 0xd5d687f2, expects 0x5a2481cb on node 0x002b:e1-eth2 ❌ Digest does not match
+*** 🔍 Tracing new route
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:e1-eth2 ✅ ok
+*** Comparing 0xabadcafe, expects 0xabadcafe on node 0x00ff:s1-eth1 ✅ ok
+*** Comparing 0x432cf798, expects 0x432cf798 on node 0x002b:s1-eth2 ✅ ok
+*** Comparing 0x432cf798, expects 0x432cf798 on node 0x002b:s2-eth2 ✅ ok
+*** Comparing 0xe04df688, expects 0xe04df688 on node 0x002d:s2-eth3 ✅ ok
+*** Comparing 0xe04df688, expects 0xe04df688 on node 0x002d:s3-eth2 ✅ ok
+*** Comparing 0xe8f0142c, expects 0xe8f0142c on node 0x0039:s3-eth3 ✅ ok
+*** Comparing 0xe8f0142c, expects 0xe8f0142c on node 0x0039:s4-eth2 ✅ ok
+*** Comparing 0xb452022a, expects 0xb452022a on node 0x003f:s4-eth3 ✅ ok
+*** Comparing 0xb452022a, expects 0xb452022a on node 0x003f:s6-eth2 ✅ ok
+*** Comparing 0x5e8a06af, expects 0x4450d2d2 on node 0x0053:s6-eth3 ❌ Digest does not match
+*** Comparing 0x5e8a06af, expects 0x4450d2d2 on node 0x0053:s5-eth2 ❌ Digest does not match
+*** Comparing 0x87b6a5ad, expects 0xe9367b57 on node 0x0047:s5-eth3 ❌ Digest does not match
+*** Comparing 0x87b6a5ad, expects 0xe9367b57 on node 0x0047:s7-eth2 ❌ Digest does not match
+*** Comparing 0xe10eeae2, expects 0x991182c1 on node 0x008d:s7-eth3 ❌ Digest does not match
+*** Comparing 0xe10eeae2, expects 0x991182c1 on node 0x008d:s8-eth2 ❌ Digest does not match
+*** Comparing 0x8355d2f2, expects 0x35e72e11 on node 0x00bd:s8-eth3 ❌ Digest does not match
+*** Comparing 0x8355d2f2, expects 0x35e72e11 on node 0x00bd:s9-eth2 ❌ Digest does not match
+*** Comparing 0xd5dc08f2, expects 0xaa152eb9 on node 0x00d7:s9-eth3 ❌ Digest does not match
+*** Comparing 0xd5dc08f2, expects 0xaa152eb9 on node 0x00d7:s10-eth2 ❌ Digest does not match
+*** Comparing 0x95e775de, expects 0x1a1573e7 on node 0x00f5:s10-eth1 ❌ Digest does not match
+*** Comparing 0x95e775de, expects 0x1a1573e7 on node 0x00f5:e10-eth2 ❌ Digest does not match
+*** OUT OF ORDER TEST DONE ***
