@@ -1,0 +1,82 @@
+\begin{thebibliography}{}
+
+\bibitem[Aumasson and Bernstein 2012]{siphash}
+Aumasson, J.-P. and Bernstein, D.~J. (2012).
+\newblock {SipHash}: a fast short-input {PRF}.
+\newblock Cryptology {ePrint} Archive, Paper 2012/351.
+
+\bibitem[Ben~Basat et~al. 2020]{PINT2020}
+Ben~Basat, R., Ramanathan, S., Li, Y., Antichi, G., Yu, M., and Mitzenmacher,
+  M. (2020).
+\newblock Pint: Probabilistic in-band network telemetry.
+\newblock In {\em Proceedings of the Annual Conference of the ACM Special
+  Interest Group on Data Communication on the Applications, Technologies,
+  Architectures, and Protocols for Computer Communication}, SIGCOMM '20, page
+  662–680, New York, NY, USA. Association for Computing Machinery.
+
+\bibitem[Bosshart et~al. 2014]{p4}
+Bosshart, P., Daly, D., Gibb, G., Izzard, M., McKeown, N., Rexford, J.,
+  Schlesinger, C., Talayco, D., Vahdat, A., Varghese, G., and Walker, D.
+  (2014).
+\newblock P4: programming protocol-independent packet processors.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 44(3):87--95.
+
+\bibitem[Consortium 2025]{bmv2}
+Consortium, P.~L. (2025).
+\newblock Behavioral model.
+\newblock \url{https://github.com/p4lang/behavioral-model}.
+\newblock Accessed: 2025-03-15.
+
+\bibitem[Dominicini et~al. 2021]{polkap4}
+Dominicini, C., Guimarães, R., Mafioletti, D., Martinello, M., Ribeiro, M.
+  R.~N., Villaça, R., Loui, F., Ortiz, J., Slyne, F., Ruffini, M., and Kenny,
+  E. (2021).
+\newblock Deploying polka source routing in p4 switches : (invited paper).
+\newblock In {\em 2021 International Conference on Optical Network Design and
+  Modeling (ONDM)}, pages 1--3.
+
+\bibitem[Dominicini et~al. 2020]{polka}
+Dominicini, C., Mafioletti, D., Locateli, A.~C., Villaca, R., Martinello, M.,
+  Ribeiro, M., and Gorodnik, A. (2020).
+\newblock Polka: Polynomial key-based architecture for source routing in
+  network fabrics.
+\newblock In {\em 2020 6th IEEE Conference on Network Softwarization
+  (NetSoft)}, pages 326--334.
+
+\bibitem[Fontes et~al. 2015]{mininet-wifi}
+Fontes, R.~R., Afzal, S., Brito, S. H.~B., Santos, M. A.~S., and Rothenberg,
+  C.~E. (2015).
+\newblock Mininet-wifi: Emulating software-defined wireless networks.
+\newblock In {\em 2015 11th International Conference on Network and Service
+  Management (CNSM)}, pages 384--389.
+
+\bibitem[Jyothi et~al. 2015]{SRSDN}
+Jyothi, S.~A., Dong, M., and Godfrey, P.~B. (2015).
+\newblock Towards a flexible data center fabric with source routing.
+\newblock In {\em Proceedings of the 1st ACM SIGCOMM Symposium on Software
+  Defined Networking Research}, SOSR '15, New York, NY, USA. Association for
+  Computing Machinery.
+
+\bibitem[Lantz et~al. 2010]{mininet}
+Lantz, B., Heller, B., and McKeown, N. (2010).
+\newblock A network in a laptop: rapid prototyping for software-defined
+  networks.
+\newblock In {\em Proceedings of the 9th ACM SIGCOMM Workshop on Hot Topics in
+  Networks}, Hotnets-IX, New York, NY, USA. Association for Computing
+  Machinery.
+
+\bibitem[Martinello et~al. 2024]{pathsec}
+Martinello, M., Gomes, R.~L., Borges, E.~S., Layber, H.~C., Bonella, V.~B.,
+  Dominicini, C.~K., Guimarães, R., Ribeiro, M., and Barcellos, M. (2024).
+\newblock Pathsec: Path-aware secure routing with native path verification and
+  auditability.
+\newblock In {\em 2024 IEEE Conference on Network Function Virtualization and
+  Software Defined Networks (NFV-SDN)}, pages 1--7.
+
+\bibitem[secdev 2003]{scapy}
+secdev, B.~P. (2003).
+\newblock Scapy.
+\newblock \url{https://scapy.net/}.
+\newblock Accessed: 2024-09-26.
+
+\end{thebibliography}
