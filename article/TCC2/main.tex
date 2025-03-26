@@ -10,11 +10,21 @@
 \usepackage{amsmath}
 \usepackage{listings}
 \usepackage{xspace}
-\usepackage{hyperref}  % Enables \autoref
+
+%% workaround hyperref was messing with bib
+%https://tex.stackexchange.com/a/125568/208799
+\makeatletter
+\newcommand{\@BIBLABEL}{\@emptybiblabel}
+\newcommand{\@emptybiblabel}[1]{}
+\makeatother
+\usepackage{hyperref}% Enables \autoref
+%%%%%%%%%
+
 \usepackage{tabularx}
 \usepackage[table]{xcolor}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{bold-extra}
 % \setlength\extrarowheight{2pt} % make the tables look less cramped
 
 \usepackage{tikz}
@@ -53,7 +63,7 @@
 \newcommand{\polka}{\textit{PolKA}\xspace}
 \newcommand{\pIV}{\textit{P4}\xspace}
 \newcommand{\bmv}{\textit{BMv2}\xspace}
-\newcommand{\siphash}{\textit{HalfSipHash}\xspace}
+\newcommand{\siphash}{\textit{Siphash}\xspace}
 
 
 \sloppy
